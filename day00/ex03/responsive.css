@@ -1,0 +1,72 @@
+html {
+	font-size: 60%;
+}
+body {
+	background: cyan;
+}
+table {
+	width: 120rem;
+}
+small {
+	font-size: 1rem;
+}
+h1 {
+	font-size: 5rem;
+	color: white;
+}
+td {
+	text-align: right;
+}
+.title-container {
+	width: 100%;
+	text-align: center;
+}
+.image {
+	height: 25rem;
+	width: auto;
+}
+.elem-cell {
+	border: 1px solid black;
+}
+.cell {
+	height: auto;
+	width: 1rem;
+}
+.symbol {
+	font-weight: bold;
+	text-align: center;
+	font-size: 1.5rem;
+}
+.elem-number {
+	float: left;
+}
+@media only screen and (min-width: 1900px) {
+	html {
+		font-size: 100%;
+  	}
+}
+@media only screen and (max-width: 1900px) {
+	html {
+		font-size: 70%;
+	}
+}
+@media only screen and (max-width: 1500px) {
+	html {
+		font-size: 55%;
+	}
+}
+@media only screen and (max-width: 1200px) {
+	html {
+		font-size: 40%;
+	}
+}
+@media only screen and (max-width: 900px) {
+	html {
+		font-size: 25%;
+  	}
+}
+@media only screen and (max-width: 600px) {
+	html {
+		font-size: 15%;
+  	}
+}

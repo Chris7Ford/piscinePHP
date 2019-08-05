@@ -1,0 +1,198 @@
+body {
+	background: #505050;
+}
+
+#prompt-input {
+	top: 95px;
+	position: absolute;
+	width: 78%;
+	border-top: border:1px solid #9C9899;
+	height: 20px;
+}
+
+.main-container {
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 1660px;
+	height: 1200px;
+	margin-top: 30px;
+}
+
+.gray {
+	background: #909090;
+}
+
+.round {
+	border-radius: 15px;
+}
+
+.sidebar {
+	height: 500px;
+	width: 150px;
+	text-align: center;
+}
+
+.level-mid {
+	position: absolute;
+	top: 180px;
+}
+
+.img-container {
+	margin: 15px 0 15px 0;
+	text-align: center;
+}
+
+.img-main {
+	height: 96%;
+	width: 97.5%;
+	padding: 15px;
+}
+
+.img-border {
+	border:5px solid red;
+	border-radius: 5px;
+}
+
+.sidebar-left {
+	left: 40px;
+}
+
+.sidebar-right {
+	right: 40px;
+}
+
+.shadow {
+  box-shadow: 10px 10px 8px;
+}
+
+.banner {
+	position: absolute;
+	top: 17.5px;
+	left: 0px;
+	width: 100%;
+	height: 143px;
+}
+
+.banner-child {
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+
+.container-main-banner-img {
+	position: absolute;
+	top: 8px;
+	left: 2px;
+}
+
+.container-img-mag {
+	position: absolute;
+	top: 15px;
+	right: 35px;
+}
+
+.icon {
+	position: absolute;
+	right: 10px;
+}
+
+.icon-top {
+	top: 10px;
+}
+
+.icon-bottom {
+	bottom: 10px;
+}
+
+.main-img {
+	position: absolute;
+	height: 680px;
+	left: 50%;
+	margin-left: -610px;
+	width: 1220px;
+}
+
+.big-word {
+	font-size: 35px;
+	font-family: Times roman;
+}
+
+.prompt {
+	background: #88FF89;
+	position: absolute;
+	font-family: verdana;
+	top: 790px;
+	left: -30px;
+	width: 545px;
+	height: 170px;
+	padding: 0 0 0 10px;
+	box-sizing: border-box;
+}
+
+.prompt-text {
+	margin-left: 3px;
+}
+
+.highlight {
+	text-shadow: 5px 5px 4px #E68448;
+}
+
+.side-image {
+	margin: 3px;
+}
+
+.container-towel {
+	height: 64px;
+}
+
+.img-towel {
+	position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 162.5px;	
+}
+
+.container-brick {
+	background-repeat: repeat;
+	background-image: url('resources/brick.jpg');
+	height: 70px;
+	margin: 8px 14px 14px 14px;
+}
+
+.cover {
+	display: block;
+	position: absolute;
+	z-index: 1;
+}
+
+.cover-chair {
+	left: 600px;
+	top: 580px;
+	height: 250px;
+	width: 180px;
+}
+
+.cover-screen {
+	right: 230px;
+	top: 560px;
+	height: 165px;
+	width: 260px;
+}
+
+.respond {
+	position: absolute;
+	height: 20px;
+	top: 0;
+	top: 95px;
+	right: 32px;
+	height:20px;
+	border-radius: 1px;
+	background-color: #E9E9E9;
+	letter-spacing: 0.4px;
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f4eff3), to(#dcdcdc));
+	border: 1px solid #a8a4a5;
+    border-radius: 1px;
+}

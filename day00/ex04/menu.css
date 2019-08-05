@@ -1,0 +1,89 @@
+a {
+	text-decoration: none;
+}
+
+.container-main {
+	width: 100vw;
+	height:30px;
+	background: purple;
+	margin: -7px 0 0 -7px;
+	position: relative;
+}
+
+.section {
+	display: inline-block;
+	border: 3px solid white;
+	color: white;
+	position: absolute;
+	top: 3px;
+}
+
+.section:hover {
+	color: orange;
+	border: 3px solid orange;
+}
+
+.content-colors {
+	display: none;
+	border: 1px solid purple;
+	height: 120px;
+	width: 100px;
+	position: absolute;
+	top: 26px;
+}
+
+.content-seasons {
+	display: none;
+	border: 1px solid purple;
+	height: 100px;
+	width: 100px;
+	position: absolute;
+	top: 26px;
+	left: 55px;
+}
+
+.section-colors:hover ~ .content-colors {
+	display: block;
+}
+
+.section-seasons:hover ~ .content-seasons {
+	display: block;
+}
+
+.content-seasons:hover {
+	display: block;
+}
+
+.content-colors:hover {
+	display: block;
+}
+
+.section-colors {
+	width: 45px;
+}
+
+.section-seasons {
+	left: 55px;
+}
+
+.red {
+	color: red;
+}
+
+.purple {
+	color: purple;
+}
+
+.blue {
+	color: blue;
+}
+
+.green {
+	color: green;
+}
+.orange {
+	color: orange;
+}
+.cyan {
+	color: cyan;
+}

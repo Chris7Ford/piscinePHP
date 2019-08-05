@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+	.balloon {
+		border-radius: 50%;
+	}
+	.t200 {
+		height: 200px;
+		width: 200px;
+	}
+	.red {
+		background: red;
+	}
+	.green {
+		background: green;
+	}
+	.blue {
+		background: blue;
+	}
+	</style>
+	<script>
+		const get_class_string = (filter) =>
+		{
+			let balloon = document.querySelector("div");
+			let classes = balloon.className.split(" ");
+			return (classes.filter(prop => prop.indexOf(filter) != -1)[0]);
+		}
+		const get_size = () => document.querySelector("div").style.height.slice(0, 3)
+		const make_it_bigger = (size, method) =>
+		{
+			let balloon = document.querySelector("div");
+			if (Number(size) > 420)
+			{
+				balloon.style.height = "200px";
+				balloon.style.width = "200px";
+			}
+			else
+			{
+				if (method == "click")
+					size = parseInt(size) + 10;
+				else if (method == "hover")
+					if (size > 200)
+						size = parseInt(size) - 5;
+				balloon.style.height = `${size}px`;
+				balloon.style.width = `${size}px`;
+			}
+		}
+		const change_color = (color) =>
+		{
+			let balloon = document.querySelector("div");
+			balloon.classList.remove(color);
+			if (color == "blue")
+				balloon.classList.add("red");
+			else if (color == "green")
+				balloon.classList.add("blue");
+			else
+				balloon.classList.add("green");
+		}
+		const change_color_back = (color) =>
+		{
+			let balloon = document.querySelector("div");
+			balloon.classList.remove(color);
+			if (color == "blue")
+				balloon.classList.add("green");
+			else if (color == "green")
+				balloon.classList.add("red");
+			else
+				balloon.classList.add("blue");
+		}
+		const blow_balloon = () =>
+		{
+			let balloon = document.querySelector("div");
+			size = get_size();
+			make_it_bigger(size, "click");
+			color = get_class_string("e");
+			change_color(color);
+		}
+		const m_out = () =>
+		{
+			let balloon = document.querySelector("div");
+			size = get_size();
+			color = get_class_string("e");
+			change_color_back(color);
+			make_it_bigger(size, "hover");
+		}
+	</script>
+</head>
+<body>
+	<div class="balloon red" style="height:200px; width:200px;" onclick="blow_balloon()" onmouseout="m_out()">
+	</div>
+</body>
+</html>

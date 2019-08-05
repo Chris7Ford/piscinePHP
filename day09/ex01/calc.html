@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--
+	 Should empty string be counted as 0?
+	 Should counter for use me be reset on submit?
+	-->
+	<script>
+		let timeout1;
+		const use_me = () => timeout1 = setTimeout(() => 
+			{
+				alert("Please, use me...");
+				use_me();
+			}, 30000)
+		use_me();
+		const try_me = () =>
+		{
+			clearTimeout(timeout1);
+			const op = document.querySelector("select").value;
+			let nums = [];
+			let sel = document.querySelectorAll("input[type='text']");
+			list = document.querySelectorAll("input[type='text']");
+			for (i = 0; i < list.length; i++)
+			{
+				if (isNaN(list[i].value) || list[i].value < 0)
+				{
+					alert("Error :(");
+					console.log("Error :(");
+					return ;
+				}
+				nums.push(Number(document.querySelectorAll("input[type='text']")[i].value));
+			}
+			if ((op == "/" || op == "%") && nums[1] == 0)
+			{
+				alert("It's over 9000!");
+				console.log("It's over 9000!");
+				return ;
+			}
+			const answer = eval(`${nums[0]} ${op} ${nums[1]}`);
+			console.log(answer);
+			alert(answer);
+			use_me();
+		}
+	</script>
+</head>
+<body>
+	<form onsubmit="return false">
+		<input type="text" />
+		<select>
+			<option value="+">+</option>
+			<option value="-">-</option>
+			<option value="*">*</option>
+			<option value="/">/</option>
+			<option value="%">%</option>
+		</select>
+		<input type="text" />
+		<input onclick="try_me()" type="submit" value="Try me!" />
+</body>
+</html>

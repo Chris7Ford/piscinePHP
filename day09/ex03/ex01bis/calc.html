@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+	$(document).ready(function(){
+		const use_me = () => timeout1 = setTimeout(() => 
+			{
+				alert("Please, use me...");
+				use_me();
+			}, 30000)
+		use_me();
+		$("[type='submit']").click(function(){
+			clearTimeout(timeout1);
+			if ($.isNumeric($("#num1").val()) == false || $.isNumeric($("#num2").val()) == false || $("#num1").val() * 1 < 0 || $("#num2").val() * 1 < 0)
+			{
+				console.log("Error :(");
+				alert("Error :(");
+				return ;
+			}
+			var num1 = $("#num1").val() * 1;
+			var num2 = $("#num2").val() * 1;
+			var op = $("select").val();
+			var answer;
+			switch (op) {
+				case "+":
+					answer = num1 + num2;
+					break ;
+				case "-":
+					answer = num1 - num2;
+					break ;
+				case "*":
+					answer = num1 * num2;
+					break ;
+				case "/":
+					answer = num1 / num2;
+					break ;
+				case "%":
+					answer = num1 % num2;
+					break ;
+				default:
+					answer = "Error :(";
+			}
+			if ((op == "/" || op == "%") && num2 == 0)
+			{
+				alert("It's over 9000!");
+				console.log("It's over 9000!");
+			}
+			else
+			{
+				console.log(answer);
+				alert(answer);
+			}
+			use_me();
+		});
+	});
+	</script>
+</head>
+<body>
+	<form onsubmit="return false">
+		<input type="text" id="num1"/>
+		<select>
+			<option value="+">+</option>
+			<option value="-">-</option>
+			<option value="*">*</option>
+			<option value="/">/</option>
+			<option value="%">%</option>
+		</select>
+		<input type="text" id="num2"/>
+		<input type="submit" value="Try me!" />
+</body>
+</html>

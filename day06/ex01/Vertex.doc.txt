@@ -1,0 +1,12 @@
+<- Vertex ----------------------------------------------------------------------
+The Vertex class stores vertex coordinates and a color as private variables.
+
+An instance can be contructed from either an array of indices:
+new Vertex( array( 'x' = 0, 'y' = 1, z = '2' [ w = '4' ], [ color = new Color(array( 'rgb' => 0))] ) );
+
+Coodninates 'x', 'y' and 'z' are mandatory.  'w' and 'color' are optional, where all are integers/floats with the exception of color, which is an object of class Color.  The default values for 'w' and 'color' are 1 and array('rgb' => 0) respectively.
+
+The class provides the following methods :
+
+None. This class is to be used to contain and classify vertex information.
+---------------------------------------------------------------------- Vertex ->

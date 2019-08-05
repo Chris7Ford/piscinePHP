@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+	.balloon {
+		border-radius: 50%;
+	}
+	.t200 {
+		height: 200px;
+		width: 200px;
+	}
+	.red {
+		background: red;
+	}
+	.green {
+		background: green;
+	}
+	.blue {
+		background: blue;
+	}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+	$(document).ready(function(){
+		$("div").click(function() {
+			if ($(this).height() > 420)
+			{
+				$(this).height(200);
+				$(this).width(200);
+			}
+			else
+			{
+				$(this).height($(this).height() + 10);
+				$(this).width($(this).width() + 10);
+			}
+			if ($(this).css("background-color") == "rgb(255, 0, 0)")
+				$(this).css("background-color", "green");
+			else if ($(this).css("background-color") == "rgb(0, 128, 0)")
+				$(this).css("background-color", "blue");
+			else if ($(this).css("background-color") == "rgb(0, 0, 255)")
+				$(this).css("background-color", "red");
+		});
+		$("div").mouseout(function(){
+			if ($(this).height() >= 200)
+			{
+				$(this).height($(this).height() - 5);
+				$(this).width($(this).width() - 5);
+			}
+			if ($(this).css("background-color") == "rgb(255, 0, 0)")
+				$(this).css("background-color", "blue");
+			else if ($(this).css("background-color") == "rgb(0, 128, 0)")
+				$(this).css("background-color", "red");
+			else if ($(this).css("background-color") == "rgb(0, 0, 255)")
+				$(this).css("background-color", "green");
+		});
+	});
+	</script>
+</head>
+<body>
+	<div class="balloon red" style="height:200px; width:200px;">
+	</div>
+</body>
+</html>
